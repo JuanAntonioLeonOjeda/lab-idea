@@ -4,9 +4,9 @@
     <br />
     <label for="author">Author: {{ post.author }}</label>
     <br />
-    <label for="likes">Likes: {{ post.likes }}</label>
+    <label for="likes">Likes: {{ countLikes }}</label>
     <br />
-    <LikeButton text="Like" />
+    <LikeButton text="Like" :addLike="like" />
     <ButtonComponent text="Comment" />
     <ButtonComponent text="Favourites" />
   </div>
@@ -18,6 +18,11 @@ import LikeButton from "@/components/LikeButton.vue";
 
 export default {
   name: "PostComponent",
+  data() {
+    return {
+      likes: this.post.likes,
+    };
+  },
   props: {
     post: {
       type: Object,
@@ -26,6 +31,16 @@ export default {
   components: {
     ButtonComponent,
     LikeButton,
+  },
+  methods: {
+    like() {
+      this.likes++;
+    },
+  },
+  computed: {
+    countLikes() {
+      return this.likes;
+    },
   },
 };
 </script>
