@@ -6,7 +6,7 @@
     <br />
     <label for="likes">Likes: {{ countLikes }}</label>
     <br />
-    <LikeButton text="Like" :addLike="like" />
+    <ButtonComponent text="Like" :addLike="like" />
     <ButtonComponent text="Comment" />
     <ButtonComponent text="Favourites" />
   </div>
@@ -14,7 +14,6 @@
 
 <script>
 import ButtonComponent from "@/components/ButtonComponent.vue";
-import LikeButton from "@/components/LikeButton.vue";
 
 export default {
   name: "PostComponent",
@@ -30,7 +29,6 @@ export default {
   },
   components: {
     ButtonComponent,
-    LikeButton,
   },
   methods: {
     like() {

@@ -1,6 +1,6 @@
 <template>
   <span>
-    <button>{{ text }}</button>
+    <button @click="addLike">{{ text }}</button>
   </span>
 </template>
 
@@ -11,6 +11,9 @@ export default {
     text: {
       type: String,
       required: true,
+    },
+    addLike: {
+      type: Function,
     },
   },
 };
