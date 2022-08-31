@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <PostList :posts="postList" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import PostList from "@/components/PostList.vue";
+var posts = require("./posts.json");
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    PostList,
+  },
+  data() {
+    return {
+      postList: posts,
+    };
   },
 };
 </script>

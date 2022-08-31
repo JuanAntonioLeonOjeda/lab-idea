@@ -1,0 +1,11 @@
+[
+  {
+  "id": 1, "text": "My first Post", "author": "Developer 1", "likes": 4
+  },
+  {
+    "id": 2, "text": "My second Post", "author": "Developer 1", "likes": 2
+  },
+  {
+    "id": 3, "text": "Vue is Awesome!", "author": "Developer 2", "likes": 8
+  }
+]
